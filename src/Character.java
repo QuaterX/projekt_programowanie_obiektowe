@@ -1,35 +1,34 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Character implements FreeroamActions {
-    private String name;
-    private EquipmentType slot1;
-    private EquipmentType slot2;
-    private Stats baseStats;
-    private ArrayList<EquipmentType> inventory;
 
-    // For creating a new character
+    protected String name;
+    protected Equipment slot1;
+    protected Equipment slot2;
+    protected Stats baseStats;
+    protected ArrayList<Item> inventory;
+
     public Character(String name) {
         this.name = name;
         this.baseStats = new Stats(1,1,1,1,1);
         this.inventory = new ArrayList<>();
     }
 
-    // For creating a character with already set level and baseStats
     public Character(String name, Stats stats) {
         this.name = name;
         this.baseStats = stats;
         this.inventory = new ArrayList<>();
     }
 
-    // For creating a character with already set level, baseStats and equipment
-    public Character(String name, Stats stats, EquipmentType slot1, EquipmentType slot2, EquipmentType... items) {
+    public Character(String name, Stats stats, Equipment slot1, Equipment slot2, Item... items) {
         this.name = name;
         this.slot1 = slot1;
         this.slot2 = slot2;
         this.baseStats = stats;
-        this.inventory = new ArrayList<>(List.of(items));
+        this.inventory = new ArrayList<>();
+
+        inventory.addAll(Arrays.asList(items));
     }
 
     @Override

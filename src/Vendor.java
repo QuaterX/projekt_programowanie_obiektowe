@@ -1,30 +1,19 @@
-public class Vendor extends LocationPoi implements FreeroamActions{
+public class Vendor extends Character implements Interactable {
+
     public Vendor(String name) {
         super(name);
     }
 
-    @Override
-    public void changeLocation(Location location) {
+    public Vendor(String name, Stats stats) {
+        super(name, stats);
+    }
 
+    public Vendor(String name, Stats stats, Equipment slot1, Equipment slot2, Item... items) {
+        super(name, stats, slot1, slot2, items);
     }
 
     @Override
-    public void checkSurroundings() {
-
-    }
-
-    @Override
-    public void selectPoi() {
-
-    }
-
-    @Override
-    public void checkEnemy() {
-
-    }
-
-    @Override
-    public void attackEnemy() {
+    public void interact(Character character) {
 
     }
 }

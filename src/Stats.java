@@ -1,9 +1,9 @@
 public class Stats {
-    private int level;
-    private int strength;
-    private int dexterity;
-    private int intelligence;
-    private int vitality;
+    private final int level;
+    private final int strength;
+    private final int dexterity;
+    private final int intelligence;
+    private final int vitality;
 
     public Stats(int level,
                  int strength,
@@ -24,6 +24,16 @@ public class Stats {
                 dexterity + other.dexterity,
                 intelligence + other.intelligence,
                 vitality + other.vitality
+        );
+    }
+
+    public Stats subtract(Stats other) {
+        return new Stats(
+                level - other.level,
+                strength - other.strength,
+                dexterity - other.dexterity,
+                intelligence - other.intelligence,
+                vitality - other.vitality
         );
     }
 

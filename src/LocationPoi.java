@@ -1,11 +1,8 @@
-public class LocationPoi {
-    private final String name;
+public abstract class LocationPoi implements Interactable {
+    private String name;
 
-    public LocationPoi(String name) {
-        this.name = name;
-    }
+    @Override
+    public void interact(Character character) {
 
-    public String getName() {
-        return name;
     }
 }
