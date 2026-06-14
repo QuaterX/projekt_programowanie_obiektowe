@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
-    public static void start() {
+    public static void start() throws IOException {
         Scanner input = new Scanner(System.in);
         System.out.println("""
                 Wybierz jedną z opcji:

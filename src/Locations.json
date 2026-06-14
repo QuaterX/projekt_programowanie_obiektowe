@@ -2,20 +2,14 @@
   {
     "name": "Town",
     "connectedLocations": [
-      {
-        "name": "Inn"
-      },
-      {
-        "name": "Town Hall"
-      }
+      "Inn",
+      "Forest"
     ]
   },
   {
     "name": "Inn",
     "connectedLocations": [
-      {
-        "name": "Town"
-      }
+      "Town"
     ],
     "characterList": [
       {
@@ -26,7 +20,9 @@
   },
   {
     "name": "Forest",
-    "poiList": [],
+    "connectedLocations": [
+      "Town"
+    ],
     "characterList": [
       {
         "type": "enemy",

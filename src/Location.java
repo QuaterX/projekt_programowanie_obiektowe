@@ -33,4 +33,12 @@ public class Location {
     public void setConnectedLocations(ArrayList<Location> connectedLocations) {
         this.connectedLocations = connectedLocations;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void addCharacterToList(Character character){
+        charactersList.add(character);
+    }
 }
