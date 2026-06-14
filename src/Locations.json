@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Town",
+    "connectedLocations": [
+      {
+        "name": "Inn"
+      },
+      {
+        "name": "Town Hall"
+      }
+    ]
+  },
+  {
+    "name": "Inn",
+    "connectedLocations": [
+      {
+        "name": "Town"
+      }
+    ],
+    "characterList": [
+      {
+        "type": "vendor",
+        "name": "Isaac"
+      }
+    ]
+  },
+  {
+    "name": "Forest",
+    "poiList": [],
+    "characterList": [
+      {
+        "type": "enemy",
+        "name": "Goblin"
+      }
+    ]
+  }
+]

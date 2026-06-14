@@ -3,18 +3,18 @@ import java.util.List;
 
 public class Location {
     private String name;
-    private ArrayList<LocationPoi> poiList;
+    private ArrayList<Location> connectedLocations;
     private ArrayList<Character> charactersList;
 
     public Location(String name) {
         this.name = name;
-        this.poiList = new ArrayList<>();
+        this.connectedLocations = new ArrayList<>();
         this.charactersList = new ArrayList<>();
     }
 
-    public Location(String name, LocationPoi... poi) {
+    public Location(String name, Location... poi) {
         this.name = name;
-        this.poiList = new ArrayList<>(List.of(poi));
+        this.connectedLocations = new ArrayList<>(List.of(poi));
         this.charactersList = new ArrayList<>();
     }
 
@@ -26,11 +26,11 @@ public class Location {
         this.charactersList = characters_list;
     }
 
-    public ArrayList<LocationPoi> getPoiList() {
-        return poiList;
+    public ArrayList<Location> getConnectedLocations() {
+        return connectedLocations;
     }
 
-    public void setPoiList(ArrayList<LocationPoi> poiList) {
-        this.poiList = poiList;
+    public void setConnectedLocations(ArrayList<Location> connectedLocations) {
+        this.connectedLocations = connectedLocations;
     }
 }

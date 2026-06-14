@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Character implements FreeroamActions {
+public class Character {
 
     protected String name;
     protected Equipment slot1;
@@ -31,27 +31,22 @@ public class Character implements FreeroamActions {
         inventory.addAll(Arrays.asList(items));
     }
 
-    @Override
     public void changeLocation(Location location) {
 
     }
 
-    @Override
     public void checkSurroundings() {
 
     }
 
-    @Override
     public void selectPoi() {
 
     }
 
-    @Override
     public void checkEnemy() {
 
     }
 
-    @Override
     public void attackEnemy() {
 
     }
