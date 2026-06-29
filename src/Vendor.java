@@ -12,7 +12,6 @@ public class Vendor extends Character implements Interactable {
         super(name, stats, slot1, slot2, items);
     }
 
-    @Override
     public void interact(Character character) {
 
     }
