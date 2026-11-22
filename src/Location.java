@@ -41,4 +41,12 @@ public class Location {
     public void addCharacterToList(Character character){
         charactersList.add(character);
     }
+
+    public String connectedLocationsToString () {
+        StringBuilder connectedLocationsTemp = new StringBuilder();
+        for (int i = 0; i < this.connectedLocations.size(); i++) {
+            connectedLocationsTemp.append(this.connectedLocations.get(i).getName());
+        }
+        return connectedLocationsTemp.toString();
+    }
 }

@@ -10,15 +10,25 @@ public class Character {
     protected Stats baseStats;
     protected ArrayList<Item> inventory;
     protected Location currentLocation;
+    protected boolean isPlayable;
 
+    /**
+     * This class constructor is used for creating a playable character with base stats of (1,1,1,1,1)
+     */
     public Character(String name) {
         this.name = name;
         this.baseStats = new Stats(1,1,1,1,1);
         this.inventory = new ArrayList<>();
         this.currentHp = baseStats.getHp();
+        this.isPlayable = true;
     }
 
+    /**
+     * This class constructor is used for creating a non-playable character with set stats.
+     * To give the stats use the Stats class constructor.
+     */
     public Character(String name, Stats stats) {
+
         this.name = name;
         this.baseStats = stats;
         this.inventory = new ArrayList<>();
@@ -38,6 +48,14 @@ public class Character {
 
     public Location getCurrentLocation() {
         return currentLocation;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getCurrentHp() {

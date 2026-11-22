@@ -57,8 +57,9 @@ public class Main {
     }
 
     public static void game() throws IOException {
-        if(player.getCurrentHp() > 0){
-            game();
-        }
+
     }
 }
+
+
+///<33 - Oliwka tu była 12:00 22.11.2026///
